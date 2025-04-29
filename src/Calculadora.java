@@ -8,6 +8,14 @@ public class Calculadora {
     public static int sumar(int a, int b) {
         return a + b;
     }
+    public static double dividir(int a, int b){
+        if (b ==0) {
+            System.out.println("Error no se puede dividir por cero");
+            return Double.NaN;
+        }
+        return (double) a / b;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -24,6 +32,9 @@ public class Calculadora {
 
         int resultadoSuma = sumar(numero1, numero2);
         System.out.println("El resultado de la suma es: " + resultadoSuma);
+
+        double resultadoDivision = dividir(numero1, numero2);
+        System.out.println("El resultado de la división es: " + resultadoDivision);
 
         scanner.close();
     }
