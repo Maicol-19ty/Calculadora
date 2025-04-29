@@ -15,7 +15,9 @@ public class Calculadora {
         }
         return (double) a / b;
     }
-
+    public static int restar(int a, int b) {
+        return a - b;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -35,6 +37,9 @@ public class Calculadora {
 
         double resultadoDivision = dividir(numero1, numero2);
         System.out.println("El resultado de la división es: " + resultadoDivision);
+
+        int resultadoResta = restar(numero1, numero2);
+        System.out.println("El resultado de la resta es: " + resultadoResta);
 
         scanner.close();
     }
